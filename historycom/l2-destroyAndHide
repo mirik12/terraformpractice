@@ -1,10 +1,37 @@
- 2192  terraform destroy
- export AWS_ACCESS_KEY=<>
- 2193  export AWS_SECRET_KEY=<>
- 2194  terraform apply
- 2195  cd Lesson-1
- 2196  terraform apply
- 2197  terraform init
- 2198  terraform apply
- 2199  aws ec2 describe-instances
- 2200  AWS_DEFAULT_REGION=<>
+2192  terraform destroy
+export AWS_ACCESS_KEY=<>
+2193  export AWS_SECRET_KEY=<>
+2194  terraform apply
+2195  cd Lesson-1
+2196  terraform apply
+2197  terraform init
+2198  terraform apply
+2199  aws ec2 describe-instances
+2200  AWS_DEFAULT_REGION=<>
+
+cd ..
+cd Lesson-2
+terraform init
+terraform apply
+terraform destroy
+terraform apply
+cd ../../
+cd /../..
+pwd
+cd Users
+cd mark
+cd Downloads
+ls
+chmod400 terraform.pem
+chmod 400 terraform.pem
+cd /Users/mark/Downloads/rest/dev/practice/terraformpractice/Lesson-2
+terraform apply
+cd Downloads
+cd ..
+terraform apply
+cd terraformpractice
+cd /Users/mark/Downloads/rest/dev/practice/terraformpractice/Lesson-2
+terraform apply
+ssh -i /Users/mark/Downloads/terraform.pem ec2-user@18.156.163.62
+terraform apply
+terraform destroy
