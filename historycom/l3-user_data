@@ -1,0 +1,8 @@
+ 2235  asciinema rec
+ 2236* ll
+ 2237* cd ..
+ 2238* ll
+ 2239* cd Lesson-3
+ 2240* ll
+ 2241* terraform init
+ 2242* terraform apply
