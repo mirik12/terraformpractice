@@ -1,0 +1,2 @@
+terraform + aws create
+https://asciinema.org/a/RhSNtwWomatrdoFMh5LCis8lO

@@ -1,0 +1,10 @@
+ 2192  terraform destroy
+ export AWS_ACCESS_KEY=<>
+ 2193  export AWS_SECRET_KEY=<>
+ 2194  terraform apply
+ 2195  cd Lesson-1
+ 2196  terraform apply
+ 2197  terraform init
+ 2198  terraform apply
+ 2199  aws ec2 describe-instances
+ 2200  AWS_DEFAULT_REGION=<>

@@ -1,0 +1,38 @@
+ 2127  zsh
+ 2128  terraform init
+ 2129  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ 2130  brew update
+ 2131  brew install tfenv
+ 2132  eval "$(tfenv init -)"
+ 2133  nano ~/.bashrc
+ 2134  brew tap hashicorp/tap
+ 2135  brew install hashicorp/tap/terraform
+ 2136  terraform version
+ 2137  tfenv use v1.4.5
+ 2138  terraform --version
+ 2139  terraform init
+ 2140  terraform apply
+ 2141  aws s3 ls
+ 2142  aws configure
+ 2143  aws s3 ls
+ 2144  terraform apply
+ 2145  cd ~/Downloads
+ 2146  ls -la
+ 2147  chmod 400 terraform.pem
+ 2148  ssh -i "terraform.pem" ec2-user@ec2-3-75-188-144.eu-central-1.compute.amazonaws.com
+ 2149  cd rest
+ 2150  cd dev
+ 2151  cd terraformpractice
+ 2152  cd Lesson-1
+ 2153  terraform plan
+ 2154  less terraform.tfstate
+ 2155  terraform plan
+ 2156  terraform apply
+ 2157  asciinema rec
+ 2158* terraform plan
+ 2159* terraform apply
+ 2160* ll
+ 2161* rm terraform.tfstate terraform.tfstate.backup
+ 2162* ll
+ 2163* terraform plan
+ 2164* terraform apply
