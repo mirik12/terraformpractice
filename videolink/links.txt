@@ -3,3 +3,6 @@ https://asciinema.org/a/RhSNtwWomatrdoFMh5LCis8lO
 
 Terraform. Create user_data in separate file
 https://asciinema.org/a/IqOaZvmWf95x6iXl5jh61cCjZ
+
+Terraform. Resource createrion order
+https://asciinema.org/a/xjlcd05nJOOnX7oSpRHqGD3QB
