@@ -22,7 +22,7 @@ provider "aws" {
   }
 }
 
-
+#-------------------------------------------
 data "aws_availability_zones" "working" {}
 data "aws_ami" "latest_amazon_linux" {
   owners      = ["137112412989"]
