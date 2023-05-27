@@ -1,49 +1,60 @@
-provider "aws" {}
+provider "aws" {
+  region = "ap-southeast-2"
+}
 
-data "aws_availability_zones" "working" {}
-data "aws_caller_identity" "current" {}
-data "aws_region" "current" {}
-data "aws_vpcs" "my_vpcs" {}
-
-# data "aws_vpc" "prod_vpc" {
-#   tags = {
-#     Name = "prod"
-#   }
-# }
-
-data "aws_vpc" "prod_vpc" {
+data "aws_ami" "latest_ubuntu" {
+  owners      = ["099720109477"]
+  most_recent = true
   filter {
-    name   = "tag:Name"
-    values = ["prod"]
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-jammy-22.04-amd64-server-*"]
   }
 }
 
-output "prod_vpc_id" {
-  value = data.aws_vpc.prod_vpc.id
+
+data "aws_ami" "latest_amazon_linux" {
+  owners      = ["amazon"]
+  most_recent = true
+  filter {
+    name   = "name"
+    values = ["amzn2-ami-kernel-5.10-hvm-*-x86_64-gp2"]
+  }
 }
 
-output "pod_vpc_cidr" {
-  value = data.aws_vpc.prod_vpc.cidr_block
+data "aws_ami" "latest_windows_2016" {
+  owners      = ["amazon"]
+  most_recent = true
+  filter {
+    name   = "name"
+    values = ["Windows_Server-2016-English-Full-Base-*"]
+  }
 }
 
-
-output "data_aws_availability_zones" {
-  value = data.aws_availability_zones.working.names
-
+resource "aws_instance" "my_webserver_ubuntu" {
+  ami           = data.aws_ami.latest_ubuntu.id # Amazon Linux AMI
+  instance_type = "t2.micro"
 }
 
-output "data_aws_caller_identity" {
-  value = data.aws_caller_identity.current.account_id
+output "latest_ubuntu_ami_id" {
+  value = data.aws_ami.latest_ubuntu.id
 }
 
-output "data_aws_region" {
-  value = data.aws_region.current.name
+output "latest_ubuntu_ami_name" {
+  value = data.aws_ami.latest_ubuntu.name
 }
 
-output "data_aws_region_description" {
-  value = data.aws_region.current.description
+output "latest_amazon_linux_ami_name" {
+  value = data.aws_ami.latest_amazon_linux.name
 }
 
-output "aws_vpcs" {
-  value = data.aws_vpcs.my_vpcs.ids
+output "latest_amazon_linux_ami_id" {
+  value = data.aws_ami.latest_amazon_linux.id
+}
+
+output "latest_windows_ami_name" {
+  value = data.aws_ami.latest_windows_2016.name
+}
+
+output "latest_windows_ami_id" {
+  value = data.aws_ami.latest_windows_2016.id
 }
