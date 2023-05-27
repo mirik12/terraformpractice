@@ -1,0 +1,2 @@
+Terraform START: суббота, 27 мая 2023 г. 18:20:38 (CEST)
+Terraform END: суббота, 27 мая 2023 г. 18:37:48 (CEST)
