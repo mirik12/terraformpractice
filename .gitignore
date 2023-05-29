@@ -2,4 +2,5 @@
 *.tfstate.backup
 *terraform
 *.terraform.lock.hcl
-.DS_Store
+*.DS_Store
+*/Users/mark/Downloads/rest/dev/practice/terraformpractice/Lesson-24-gcp/mygcp-creds.json
