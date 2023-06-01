@@ -11,8 +11,8 @@
 
 
 provider "google" {
-  credentials = file("mygcp-creds.json")
-  project     = "unique-dialect-381214"
+  credentials = file("your")
+  project     = "your"
   region      = "us-west1"
   zone        = "us-west1-c"
 }
